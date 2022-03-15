@@ -11,6 +11,41 @@ async function createOrder({ product, quantity }) {
     [product, quantity]
   );
   return new Order(rows[0]);
+  // const expected = {
+  //   product: 'pizza',
+  //   quantity: 2,
+  // };
+  // const res = await request(app).post('/api/v1/orders').send(expected);
+
+  // const { rows } = await pool.query(
+  //   `
+  //   INSERT
+  //   INTO
+  //   orders(product, quantity)
+  //   VALUES ($1, $2) RETURNING *;
+  //   `,
+  //   [product, quantity]
+  // );
+  // const order = new Order(rows[0]);
+  // // console.log(rows);
+  // return order;
+
+  // expect(res.body).toEqual(expected);
+  // const { rows } = await pool.query(
+  //   `
+  //   SELECT
+  //   *
+  //   FROM
+  //     orders
+  //   WHERE
+  //     product=$1
+  //   AND
+  //     quantity=$2
+  //   `,
+  //   [product, quantity]
+  // );
+  // console.log(rows);
+  // return rows;
 }
 
 // TODO: Remove this function & use the Order model
