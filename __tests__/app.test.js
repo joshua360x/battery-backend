@@ -3,7 +3,7 @@ const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
 const Order = require('../lib/models/Order');
-const { insert } = require('../lib/models/Order');
+
 
 // TODO: Remove this function & use the Order model
 async function createOrder({ product, quantity }) {
